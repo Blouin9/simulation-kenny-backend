@@ -27,8 +27,7 @@ app.post('/api/gemini', async (req, res) => {
       return res.status(500).json({ error: 'API key not configured' });
     }
 
-    const { body } = req.body;
-    
+    const body = req.body;    
     if (!body) {
       return res.status(400).json({ error: 'Request body is required' });
     }
